@@ -1,14 +1,22 @@
 // src/App.jsx
-import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import LandingPage from './components/LandingPage/LandingPage';
 import AdminPanel from './components/Admin/AdminPanel';
 
 function App() {
   return (
-    <div>
-      <LandingPage />
-      <AdminPanel />
-    </div>
+    <Router>
+      <Routes>
+        {/* Route for Landing Page */}
+        <Route path="/" element={<LandingPage />} />
+
+        {/* Route for Admin Panel */}
+        <Route path="/adminpanel" element={<AdminPanel />} />
+
+        {/* Redirect all other routes to the Landing Page */}
+        <Route path="*" element={<LandingPage />} />
+      </Routes>
+    </Router>
   );
 }
 
