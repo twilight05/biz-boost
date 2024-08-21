@@ -201,7 +201,7 @@
 
 // export default LandingPage;
 
-import happyPeople from '../../assets/images/happyPeople.jpg';
+import happyPeople from '../../assets/Images/happyPeople.jpg';
 import React, { useState } from 'react';
 
 const LandingPage = () => {
